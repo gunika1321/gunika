@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  /* font-size rescale based on screen width */
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (768 - 320)));
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 20px 1fr 20px;
+}
+
+.header {
+  padding: 1rem 2rem;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  height: 100%;
+}
+
+.scarecrow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.scarecrow img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.message {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.message h1 {
+  font-size: 2.45em;
+  text-align: center;
+}
+
+.message p {
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.message button {
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border: none;
+  margin-top: 2.5rem;
+}
+
+.footer {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .content {
+    max-width: 1240px;
+    margin: 0 auto;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: unset;
+  }
+
+  .message {
+    justify-content: center;
+  }
+
+  .message h1 {
+    font-size: 4rem;
+  }
+}
